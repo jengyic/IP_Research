@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	unsigned int ipbin;		/* Binary IP address */
 	char tmpip[16];
 
-	sscanf(argv[1], "%d", &ipbin);
+	sscanf(argv[1], "%u", &ipbin);
 	bin2ip(ipbin,tmpip);
 	printf("%s\n",tmpip);
 
