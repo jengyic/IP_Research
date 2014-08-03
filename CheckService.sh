@@ -42,7 +42,7 @@ if [ $CHKPARA -eq 1 ]; then
 	exit 1
 else
 	if [ "$SRV" == "ping" ]; then
-		SRVSTATUS=`ping -q -c 1 -t 1 -W 2 $HOST > /dev/null && echo 1`
+		SRVSTATUS=`ping -q -c 1 -W 2 $HOST > /dev/null && echo 1`
 		if [ "$SRVSTATUS" != "1" ]; then
 			echo "0"
 		else
