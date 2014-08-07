@@ -41,6 +41,9 @@ if [ $CHKPARA -eq 1 ]; then
 	echo "Example: $0 web 8.8.8.8"
 	exit 1
 else
+	# Ping to 8.8.8.8
+	sh CheckNet.sh
+
 	if [ "$SRV" == "ping" ]; then
 		SRVSTATUS=`ping -q -c 1 -W 2 $HOST > /dev/null && echo 1`
 		if [ "$SRVSTATUS" != "1" ]; then
